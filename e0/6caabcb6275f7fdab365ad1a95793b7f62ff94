@@ -1,0 +1,37 @@
+src/patterns.ts
+  s_b29e0c6f24ccb6::t_86dfbcea71385d 12-14,23-24
+  s_b29e0c6f24ccb6::t_681666cf4fc253 25-26,28-29,37-38,41-42,45-46,49-50,52-53,60-61
+test/copy.test.ts
+  s_b29e0c6f24ccb6::t_681666cf4fc253 4
+src/copy.ts
+  s_b29e0c6f24ccb6::t_681666cf4fc253 1,5,7
+tsconfig.json
+  s_b29e0c6f24ccb6::t_681666cf4fc253 4-5,8-10,13,16,19,23-24
+src/gitignore.ts
+  s_b29e0c6f24ccb6::t_681666cf4fc253 12-13,27,44-45,67-68
+package.json
+  s_b29e0c6f24ccb6::t_2ee344690a6082 5
+  s_b29e0c6f24ccb6::t_22e468070e4b09 52
+  s_b29e0c6f24ccb6::t_681666cf4fc253 3,8,27-32,34,36,38-40
+src/cli.ts
+  s_b29e0c6f24ccb6::t_492fae8067009e 4
+  s_b29e0c6f24ccb6::t_681666cf4fc253 2,5,25,28-29,47,50-51
+src/index.ts
+  s_b29e0c6f24ccb6::t_681666cf4fc253 1,3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "e06caabcb6275f7fdab365ad1a95793b7f62ff94",
+  "prompts": {},
+  "sessions": {
+    "s_b29e0c6f24ccb6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b17f4ff2-d283-41dc-8257-d52fa93dfcc4",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Minsu Lee <amond@amond.net>"
+    }
+  }
+}
