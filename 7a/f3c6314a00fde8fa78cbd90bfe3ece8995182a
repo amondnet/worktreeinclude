@@ -1,0 +1,21 @@
+LICENSE
+  s_b29e0c6f24ccb6::t_b823571aeff0db 1-21
+README.md
+  s_b29e0c6f24ccb6::t_51b1a0ae422be3 1-140
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "7af3c6314a00fde8fa78cbd90bfe3ece8995182a",
+  "prompts": {},
+  "sessions": {
+    "s_b29e0c6f24ccb6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b17f4ff2-d283-41dc-8257-d52fa93dfcc4",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Minsu Lee <amond@amond.net>"
+    }
+  }
+}
