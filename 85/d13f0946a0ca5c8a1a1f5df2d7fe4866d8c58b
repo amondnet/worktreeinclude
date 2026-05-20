@@ -1,0 +1,48 @@
+tsconfig.json
+  s_b29e0c6f24ccb6::t_3aa2925d2b572f 1-27
+src/copy.ts
+  s_b29e0c6f24ccb6::t_19b07b6b910f64 32-35
+  s_b29e0c6f24ccb6::t_aea6e93fce85aa 40,44
+  s_b29e0c6f24ccb6::t_6fee44ecefa26b 81
+  s_b29e0c6f24ccb6::t_031772df18a52e 1,3-31,36-39,41-43,45-80,82-118
+  s_b29e0c6f24ccb6::t_2967f852f58250 2
+src/cli.ts
+  s_b29e0c6f24ccb6::t_9771f0ec604ad6 1,3-21,30,32-41,50-51,53-62,64-66,70-71,73,75-80,82-87
+  s_b29e0c6f24ccb6::t_8db2e9a1a16c44 2,22-29,31,42-49,52,63,67-69,72,74,81
+package.json
+  s_b29e0c6f24ccb6::t_cad06b48b9d47e 48
+  s_b29e0c6f24ccb6::t_8dc72e58539f15 1-47,49-53
+src/gitignore.ts
+  s_b29e0c6f24ccb6::t_1dc387fd00c3bb 1-68
+src/patterns.ts
+  s_b29e0c6f24ccb6::t_123d375505a894 1-58
+.gitignore
+  s_b29e0c6f24ccb6::t_9d41b3722f5aa8 1-10
+test/copy.test.ts
+  s_b29e0c6f24ccb6::t_675f11fbaccddb 1-144
+.worktreeinclude
+  s_b29e0c6f24ccb6::t_1b3b693e8ee57d 1-3
+test/patterns.test.ts
+  s_b29e0c6f24ccb6::t_68f25dbcfb70f5 6,12
+  s_b29e0c6f24ccb6::t_da51be443d962a 1-5,7-11,13-54
+eslint.config.ts
+  s_b29e0c6f24ccb6::t_8d828d50a7fd0d 1-10
+src/index.ts
+  s_b29e0c6f24ccb6::t_81c2bf537d8ca1 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "85d13f0946a0ca5c8a1a1f5df2d7fe4866d8c58b",
+  "prompts": {},
+  "sessions": {
+    "s_b29e0c6f24ccb6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b17f4ff2-d283-41dc-8257-d52fa93dfcc4",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": null
+    }
+  }
+}
