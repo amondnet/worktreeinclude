@@ -9,7 +9,8 @@ export async function filterGitIgnored(
   repoRoot: string,
   paths: readonly string[],
 ): Promise<Set<string>> {
-  if (paths.length === 0) return new Set()
+  if (paths.length === 0)
+    return new Set()
 
   const proc = Bun.spawn(
     ['git', 'check-ignore', '--stdin', '-z'],
@@ -23,7 +24,7 @@ export async function filterGitIgnored(
 
   // `-z` requires NUL-terminated input *and* NUL-separated output.
   const writer = proc.stdin
-  writer.write(paths.join('\0') + '\0')
+  writer.write(`${paths.join('\0')}\0`)
   await writer.end()
 
   const [stdout, stderr, exitCode] = await Promise.all([
@@ -40,7 +41,8 @@ export async function filterGitIgnored(
     throw new Error(`git check-ignore failed: ${stderr.trim() || 'unknown error'}`)
   }
 
-  if (stdout === '') return new Set()
+  if (stdout === '')
+    return new Set()
 
   const ignored = stdout
     .split('\0')
@@ -62,7 +64,8 @@ export async function findRepoRoot(cwd: string): Promise<string | null> {
     new Response(proc.stdout).text(),
     proc.exited,
   ])
-  if (exitCode !== 0) return null
+  if (exitCode !== 0)
+    return null
   const root = stdout.trim()
   return root === '' ? null : root
 }

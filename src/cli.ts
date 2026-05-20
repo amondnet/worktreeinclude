@@ -1,6 +1,8 @@
 #!/usr/bin/env bun
-import { parseArgs, type ParseArgsConfig } from 'node:util'
+import type { ParseArgsConfig } from 'node:util'
 import { resolve } from 'node:path'
+import process from 'node:process'
+import { parseArgs } from 'node:util'
 
 import { copyWorktreeIncludes } from './copy.ts'
 
@@ -20,11 +22,11 @@ Options:
 `
 
 const OPTIONS = {
-  config: { type: 'string', short: 'c' },
+  'config': { type: 'string', short: 'c' },
   'dry-run': { type: 'boolean', short: 'n' },
   'no-gitignore': { type: 'boolean' },
-  quiet: { type: 'boolean', short: 'q' },
-  help: { type: 'boolean', short: 'h' },
+  'quiet': { type: 'boolean', short: 'q' },
+  'help': { type: 'boolean', short: 'h' },
 } satisfies ParseArgsConfig['options']
 
 async function main(argv: readonly string[]): Promise<number> {
@@ -42,11 +44,11 @@ async function main(argv: readonly string[]): Promise<number> {
   }
 
   const values = parsed.values as {
-    config?: string
+    'config'?: string
     'dry-run'?: boolean
     'no-gitignore'?: boolean
-    quiet?: boolean
-    help?: boolean
+    'quiet'?: boolean
+    'help'?: boolean
   }
 
   if (values.help) {

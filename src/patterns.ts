@@ -9,6 +9,9 @@ export interface ParsedPattern {
   directoryOnly: boolean
 }
 
+const LINE_SPLIT_RE = /\r?\n/
+const TRAILING_WS_RE = /\s+$/
+
 /**
  * Parse a `.worktreeinclude` file body into a list of patterns.
  * Empty lines and `#`-prefixed comments are skipped.
@@ -17,11 +20,13 @@ export interface ParsedPattern {
  */
 export function parsePatterns(source: string): ParsedPattern[] {
   const out: ParsedPattern[] = []
-  for (const rawLine of source.split(/\r?\n/)) {
-    const line = rawLine.replace(/\s+$/, '')
-    if (line === '' || line.startsWith('#')) continue
+  for (const rawLine of source.split(LINE_SPLIT_RE)) {
+    const line = rawLine.replace(TRAILING_WS_RE, '')
+    if (line === '' || line.startsWith('#'))
+      continue
     const parsed = parseLine(line)
-    if (parsed) out.push(parsed)
+    if (parsed)
+      out.push(parsed)
   }
   return out
 }
@@ -29,25 +34,31 @@ export function parsePatterns(source: string): ParsedPattern[] {
 function parseLine(line: string): ParsedPattern | null {
   let body = line
   const negate = body.startsWith('!')
-  if (negate) body = body.slice(1)
+  if (negate)
+    body = body.slice(1)
 
   // A leading `\#` escapes a literal `#` in gitignore syntax.
-  if (body.startsWith('\\#')) body = body.slice(1)
+  if (body.startsWith('\\#'))
+    body = body.slice(1)
 
   const directoryOnly = body.endsWith('/') && body !== '/'
-  if (directoryOnly) body = body.slice(0, -1)
+  if (directoryOnly)
+    body = body.slice(0, -1)
 
   const rooted = body.startsWith('/')
-  if (rooted) body = body.slice(1)
+  if (rooted)
+    body = body.slice(1)
 
-  if (body === '') return null
+  if (body === '')
+    return null
 
   // A pattern with a slash anywhere in the middle is relative to the file root.
   // A pattern without slashes matches at any depth (gitignore semantics).
   const hasSlash = body.includes('/')
   let glob = hasSlash || rooted ? body : `**/${body}`
 
-  if (directoryOnly) glob = `${glob}/**`
+  if (directoryOnly)
+    glob = `${glob}/**`
 
   return {
     raw: line,

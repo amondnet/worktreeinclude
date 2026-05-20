@@ -1,3 +1,3 @@
-export { copyWorktreeIncludes, type CopyOptions, type CopyResult } from './copy.ts'
-export { parsePatterns, type ParsedPattern } from './patterns.ts'
+export { type CopyOptions, type CopyResult, copyWorktreeIncludes } from './copy.ts'
 export { filterGitIgnored, findRepoRoot } from './gitignore.ts'
+export { type ParsedPattern, parsePatterns } from './patterns.ts'

@@ -1,9 +1,10 @@
-import { Glob } from 'bun'
+import type { ParsedPattern } from './patterns.ts'
 import { mkdir, realpath } from 'node:fs/promises'
 import { dirname, join, relative, sep } from 'node:path'
 
+import { Glob } from 'bun'
 import { filterGitIgnored, findRepoRoot } from './gitignore.ts'
-import { parsePatterns, type ParsedPattern } from './patterns.ts'
+import { parsePatterns } from './patterns.ts'
 
 export interface CopyOptions {
   /** Directory containing the source files (typically the main checkout). */
