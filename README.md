@@ -20,10 +20,12 @@ runs as a standalone CLI you can wire into any worktree workflow.
 ## Install
 
 ```bash
-bun add -g worktreeinclude
+bun add -g @pleaseai/worktreeinclude
 # or, without installing globally:
-bunx worktreeinclude <source> <target>
+bunx @pleaseai/worktreeinclude <source> <target>
 ```
+
+The installed binary is named `worktreeinclude`.
 
 Requires [Bun](https://bun.sh) `>= 1.1` and `git` on `$PATH`.
 
@@ -112,7 +114,7 @@ Drop it on your `$PATH` as `git-wt` and use `git wt ../feature-x -b feature-x`.
 `worktreeinclude` also exports its building blocks:
 
 ```ts
-import { copyWorktreeIncludes } from 'worktreeinclude'
+import { copyWorktreeIncludes } from '@pleaseai/worktreeinclude'
 
 const result = await copyWorktreeIncludes({
   source: '/path/to/main/checkout',
