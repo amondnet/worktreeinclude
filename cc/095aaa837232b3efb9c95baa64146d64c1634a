@@ -1,0 +1,21 @@
+bun.lock
+  ai_agent 10,49,51,53,57,59,87-88,149,155,223,275,277,279,469,645,647,649,651,653,683,685,687
+package.json
+  s_b29e0c6f24ccb6::t_f0589b4f56d3c5 51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "cc095aaa837232b3efb9c95baa64146d64c1634a",
+  "prompts": {},
+  "sessions": {
+    "s_b29e0c6f24ccb6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b17f4ff2-d283-41dc-8257-d52fa93dfcc4",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Minsu Lee <amond@amond.net>"
+    }
+  }
+}
