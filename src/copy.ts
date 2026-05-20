@@ -1,8 +1,8 @@
 import type { ParsedPattern } from './patterns.ts'
-import { mkdir, realpath } from 'node:fs/promises'
-import { dirname, join, relative, sep } from 'node:path'
-
 import { Glob } from 'bun'
+import { mkdir, realpath } from 'node:fs/promises'
+
+import { dirname, join, relative, sep } from 'node:path'
 import { filterGitIgnored, findRepoRoot } from './gitignore.ts'
 import { parsePatterns } from './patterns.ts'
 

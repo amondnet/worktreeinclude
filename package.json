@@ -42,8 +42,8 @@
     "start": "bun run src/cli.ts",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint": "bun --bun eslint",
+    "lint:fix": "bun --bun eslint --fix"
   },
   "devDependencies": {
     "@pleaseai/eslint-config": "^0.0.1",
