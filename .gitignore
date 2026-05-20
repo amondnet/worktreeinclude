@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+*.log
+.DS_Store
+
+# Example worktreeinclude targets (gitignored so tests can verify copy behavior)
+.env
+.env.local
+config/secrets.json
