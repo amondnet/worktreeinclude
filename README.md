@@ -1,5 +1,9 @@
 # worktreeinclude
 
+[![CI](https://github.com/amondnet/worktreeinclude/actions/workflows/ci.yml/badge.svg)](https://github.com/amondnet/worktreeinclude/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/amondnet/worktreeinclude/graph/badge.svg)](https://codecov.io/gh/amondnet/worktreeinclude)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 > Copy gitignored files matching `.worktreeinclude` patterns into a fresh git worktree.
 
 A fresh `git worktree add` checkout never contains untracked files like `.env`,
@@ -116,7 +120,7 @@ const result = await copyWorktreeIncludes({
   dryRun: false,
 })
 
-console.log(result.copied)         // string[] — files copied (repo-relative)
+console.log(result.copied) // string[] — files copied (repo-relative)
 console.log(result.skippedTracked) // string[] — matched but git tracks them
 ```
 
