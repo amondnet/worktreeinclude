@@ -20,7 +20,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
-        bun-version: [latest]
+        bun-version: [1.3.14]
 
     steps:
       - name: Checkout

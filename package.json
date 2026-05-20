@@ -2,7 +2,7 @@
   "name": "worktreeinclude",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "bun@1.3.13",
+  "packageManager": "bun@1.3.14",
   "description": "Copy gitignored files matching .worktreeinclude patterns into a git worktree",
   "author": "Minsu Lee <minsu.lee@dietfriends.kr>",
   "license": "MIT",
