@@ -1,0 +1,19 @@
+package.json
+  s_b29e0c6f24ccb6::t_74fc1e22539ef6 49-50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.10",
+  "base_commit_sha": "96d852b076e2954dd9c74d77f76ad5fa46024dba",
+  "prompts": {},
+  "sessions": {
+    "s_b29e0c6f24ccb6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b17f4ff2-d283-41dc-8257-d52fa93dfcc4",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Minsu Lee <amond@amond.net>"
+    }
+  }
+}
